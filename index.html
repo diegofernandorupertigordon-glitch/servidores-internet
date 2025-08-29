@@ -3,15 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <title>Servidores de Internet</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <style>
+    /* --- General --- */
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f8fb;
+      font-family: 'Roboto', sans-serif;
+      background-color: #eaf3f9;
       color: #333;
       margin: 0;
       padding: 0;
       line-height: 1.7;
+      scroll-behavior: smooth; /* Scroll suave */
     }
+
     header {
       background: linear-gradient(135deg, #005fa3, #0077cc);
       color: white;
@@ -23,42 +33,60 @@
       margin: 0;
       font-size: 2.5em;
     }
+
+    /* --- Menú horizontal moderno --- */
     nav {
-      background-color: #005fa3;
-      padding: 15px;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      padding: 20px;
+      background-color: #0077cc;
+      border-radius: 12px;
+      margin: 20px auto;
+      max-width: 900px;
     }
     nav a {
+      background-color: #00aaff;
       color: white;
+      padding: 12px 20px;
+      border-radius: 10px;
       text-decoration: none;
-      margin: 0 12px;
       font-weight: bold;
-      padding: 10px 18px;
-      border-radius: 8px;
-      background-color: #0077cc;
-      transition: background 0.3s, transform 0.2s;
-      display: inline-block;
+      transition: transform 0.2s, background 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
     nav a:hover {
-      background-color: #003d66;
       transform: scale(1.05);
+      background-color: #005fa3;
     }
+
+    /* --- Secciones como cards --- */
     section {
+      background: white;
       padding: 30px;
-      border-bottom: 1px solid #ccc;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
       max-width: 900px;
-      margin: auto;
+      margin: 30px auto;
     }
     section h2 {
       color: #0077cc;
       margin-top: 0;
+      text-align: center;
+      font-size: 1.8em;
     }
     section p {
       text-align: justify;
       font-size: 1.1em;
+      margin-bottom: 15px;
     }
+
+    /* --- Imágenes --- */
     section img {
-      max-width: 600px;   /* Imagen más grande */
+      max-width: 600px;
       width: 100%;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.25);
@@ -69,91 +97,102 @@
     section img:hover {
       transform: scale(1.07);
     }
+
+    /* --- Footer --- */
     footer {
       background: linear-gradient(135deg, #005fa3, #0077cc);
       color: white;
       text-align: center;
       padding: 20px;
-      margin-top: 20px;
       font-size: 1.1em;
+      box-shadow: 0 -3px 6px rgba(0,0,0,0.2);
+    }
+    footer a {
+      color: #ffeb3b;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      section img {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Servidores de Internet</h1>
+    <h1>🌐 Servidores de Internet</h1>
   </header>
 
+  <!-- Menú horizontal con scroll suave -->
   <nav>
-    <a href="#dns">DNS</a>
-    <a href="#web">WEB</a>
-    <a href="#ftp">FTP</a>
-    <a href="#dhcp">DHCP</a>
-    <a href="#correo">Correo</a>
+    <a href="#dns"><i class="fas fa-network-wired"></i> DNS</a>
+    <a href="#web"><i class="fas fa-globe"></i> WEB</a>
+    <a href="#ftp"><i class="fas fa-file-upload"></i> FTP</a>
+    <a href="#dhcp"><i class="fas fa-server"></i> DHCP</a>
+    <a href="#correo"><i class="fas fa-envelope"></i> Correo</a>
   </nav>
 
+  <!-- Secciones -->
   <section id="dns">
-    <h2>Servidor DNS</h2>
+    <h2><i class="fas fa-network-wired"></i> Servidor DNS</h2>
     <p>
-      El servidor DNS funciona como una especie de directorio telefónico del Internet. 
-      Cuando escribimos <b>www.google.com</b>, el DNS traduce ese nombre en una dirección IP, 
-      que son los números que realmente entienden las computadoras.  
-      Imaginemos estar en Quito: vos le dices al taxista “lléveme a la Plaza Grande” 
-      y aunque no sepas la dirección exacta, él ya sabe cómo llegar. 
-      Eso mismo hace el DNS, te guía sin que memorices números complicados.
+      El servidor DNS funciona como la guía telefónica del Internet. Cuando escribimos <b>www.google.com</b>, el DNS traduce ese nombre en una dirección IP que las computadoras entienden.  
+      Imaginemos estar en Quito: le dices al taxista “llévame a la Plaza Grande” y él ya sabe cómo llegar, aunque tú no memorices la dirección exacta. Así funciona el DNS.
     </p>
     <img src="https://www.hostingtg.com/blog/wp-content/uploads/2024/08/dns.webp" alt="Servidor DNS">
   </section>
 
   <section id="web">
-    <h2>Servidor WEB</h2>
+    <h2><i class="fas fa-globe"></i> Servidor WEB</h2>
     <p>
-      El servidor web es el que almacena y entrega las páginas cuando navegamos. 
-      Gracias a estos servidores podemos visitar Facebook, YouTube, la página de la universidad, 
-      o incluso sitios de noticias locales como <i>El Comercio</i>.  
-      Es como ir a la tiendita de la esquina: pides un jugo y te lo entregan; 
-      en Internet, pides una página y el servidor web te la muestra en segundos.
+      El servidor web almacena y entrega páginas cuando navegamos. Gracias a él podemos visitar Facebook, YouTube o la página de la universidad.  
+      Es como ir a la tiendita: pedís un jugo y te lo entregan; en Internet, pedís una página y el servidor web te la muestra.
     </p>
     <img src="https://disenowebakus.net/imagenes/articulos/servidor-web.jpg" alt="Servidor Web">
   </section>
 
   <section id="ftp">
-    <h2>Servidor FTP</h2>
+    <h2><i class="fas fa-file-upload"></i> Servidor FTP</h2>
     <p>
-      El servidor FTP se utiliza para subir y descargar archivos.  
-      Imaginemos que es como el mercado de San Roque: llevas tus productos (subir archivos) 
-      y también traes a casa lo que necesitas (descargar).  
-      Muchas empresas usan FTP para compartir documentos, programas o respaldos de manera organizada y rápida.
+      El servidor FTP sirve para subir y descargar archivos.  
+      Es como el mercado de San Roque: llevas tus productos (subir archivos) y traes los que necesitas (descargar).  
+      Muchas empresas lo usan para compartir documentos o programas de manera organizada.
     </p>
     <img src="https://byteweb.es/storage/elementor/thumbs/Como-funciona-el-protocolo-FTP-o1h0xe4trsdyfwb8sagoops4lvsx8yg8ujzuatpjxc.png" alt="Servidor FTP">
   </section>
 
   <section id="dhcp">
-    <h2>Servidor DHCP</h2>
+    <h2><i class="fas fa-server"></i> Servidor DHCP</h2>
     <p>
-      El servidor DHCP es el que entrega direcciones IP automáticas a todos los dispositivos que se conectan al WiFi.  
-      Por ejemplo, cuando llegas a tu casa y prendes el celular, este recibe una IP sin que tengas que configurarla.  
-      Es como en la feria de la Mitad del Mundo: cada persona recibe un número único para participar en la rifa, 
-      evitando confusiones. Sin el DHCP, tendríamos que poner manualmente esos números en cada aparato.
+      El servidor DHCP asigna direcciones IP automáticas a los dispositivos conectados al WiFi.  
+      Es como en la feria de la Mitad del Mundo: cada persona recibe un número único, evitando confusiones.  
+      Sin el DHCP, tendríamos que poner manualmente esas IPs en cada aparato.
     </p>
     <img src="https://administracionsistemasoperativos201415.wordpress.com/wp-content/uploads/2015/03/e.png" alt="Servidor DHCP">
   </section>
 
   <section id="correo">
-    <h2>Servidor de Correos</h2>
+    <h2><i class="fas fa-envelope"></i> Servidor de Correos</h2>
     <p>
-      El correo electrónico necesita de varios servidores para funcionar:  
-      <b>SMTP</b> (Simple Mail Transfer Protocol) se encarga de <u>enviar</u> tus mensajes,  
-      mientras que <b>IMAP</b> o <b>POP3</b> se encargan de <u>recibirlos</u>.  
-      Es como en los antiguos Correos del Ecuador: el cartero (SMTP) lleva tu carta hasta la casa del destinatario, 
-      y al llegar, tú la encuentras en tu buzón (IMAP o POP3).  
-      Gracias a estos servidores, podemos comunicarnos sin importar la distancia.
+      El correo electrónico usa varios servidores: <b>SMTP</b> envía los mensajes, mientras <b>IMAP/POP3</b> los recibe.  
+      Es como Correos del Ecuador: el cartero (SMTP) lleva la carta y tú la recibes en tu buzón (IMAP/POP3).
     </p>
     <img src="https://i.ytimg.com/vi/SlwSDpl4yds/sddefault.jpg" alt="Servidor de Correos">
   </section>
 
   <footer>
     <p>Elaborado por: <b>Diego Ruperti</b> - 2do nivel en Desarrollo de Software</p>
+    <p>Sígueme en: <a href="#">GitHub</a> | <a href="#">LinkedIn</a></p>
   </footer>
 </body>
 </html>
