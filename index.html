@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Servidores de Internet</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f8fb;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      line-height: 1.7;
+    }
+    header {
+      background: linear-gradient(135deg, #005fa3, #0077cc);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    nav {
+      background-color: #005fa3;
+      padding: 15px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+      padding: 10px 18px;
+      border-radius: 8px;
+      background-color: #0077cc;
+      transition: background 0.3s, transform 0.2s;
+      display: inline-block;
+    }
+    nav a:hover {
+      background-color: #003d66;
+      transform: scale(1.05);
+    }
+    section {
+      padding: 30px;
+      border-bottom: 1px solid #ccc;
+      max-width: 900px;
+      margin: auto;
+    }
+    section h2 {
+      color: #0077cc;
+      margin-top: 0;
+    }
+    section p {
+      text-align: justify;
+      font-size: 1.1em;
+    }
+    section img {
+      max-width: 600px;   /* Imagen más grande */
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      display: block;
+      margin: 20px auto;
+      transition: transform 0.3s;
+    }
+    section img:hover {
+      transform: scale(1.07);
+    }
+    footer {
+      background: linear-gradient(135deg, #005fa3, #0077cc);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+      font-size: 1.1em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Servidores de Internet</h1>
+  </header>
+
+  <nav>
+    <a href="#dns">DNS</a>
+    <a href="#web">WEB</a>
+    <a href="#ftp">FTP</a>
+    <a href="#dhcp">DHCP</a>
+    <a href="#correo">Correo</a>
+  </nav>
+
+  <section id="dns">
+    <h2>Servidor DNS</h2>
+    <p>
+      El servidor DNS funciona como una especie de directorio telefónico del Internet. 
+      Cuando escribimos <b>www.google.com</b>, el DNS traduce ese nombre en una dirección IP, 
+      que son los números que realmente entienden las computadoras.  
+      Imaginemos estar en Quito: vos le dices al taxista “lléveme a la Plaza Grande” 
+      y aunque no sepas la dirección exacta, él ya sabe cómo llegar. 
+      Eso mismo hace el DNS, te guía sin que memorices números complicados.
+    </p>
+    <img src="https://www.hostingtg.com/blog/wp-content/uploads/2024/08/dns.webp" alt="Servidor DNS">
+  </section>
+
+  <section id="web">
+    <h2>Servidor WEB</h2>
+    <p>
+      El servidor web es el que almacena y entrega las páginas cuando navegamos. 
+      Gracias a estos servidores podemos visitar Facebook, YouTube, la página de la universidad, 
+      o incluso sitios de noticias locales como <i>El Comercio</i>.  
+      Es como ir a la tiendita de la esquina: pides un jugo y te lo entregan; 
+      en Internet, pides una página y el servidor web te la muestra en segundos.
+    </p>
+    <img src="https://disenowebakus.net/imagenes/articulos/servidor-web.jpg" alt="Servidor Web">
+  </section>
+
+  <section id="ftp">
+    <h2>Servidor FTP</h2>
+    <p>
+      El servidor FTP se utiliza para subir y descargar archivos.  
+      Imaginemos que es como el mercado de San Roque: llevas tus productos (subir archivos) 
+      y también traes a casa lo que necesitas (descargar).  
+      Muchas empresas usan FTP para compartir documentos, programas o respaldos de manera organizada y rápida.
+    </p>
+    <img src="https://byteweb.es/storage/elementor/thumbs/Como-funciona-el-protocolo-FTP-o1h0xe4trsdyfwb8sagoops4lvsx8yg8ujzuatpjxc.png" alt="Servidor FTP">
+  </section>
+
+  <section id="dhcp">
+    <h2>Servidor DHCP</h2>
+    <p>
+      El servidor DHCP es el que entrega direcciones IP automáticas a todos los dispositivos que se conectan al WiFi.  
+      Por ejemplo, cuando llegas a tu casa y prendes el celular, este recibe una IP sin que tengas que configurarla.  
+      Es como en la feria de la Mitad del Mundo: cada persona recibe un número único para participar en la rifa, 
+      evitando confusiones. Sin el DHCP, tendríamos que poner manualmente esos números en cada aparato.
+    </p>
+    <img src="https://administracionsistemasoperativos201415.wordpress.com/wp-content/uploads/2015/03/e.png" alt="Servidor DHCP">
+  </section>
+
+  <section id="correo">
+    <h2>Servidor de Correos</h2>
+    <p>
+      El correo electrónico necesita de varios servidores para funcionar:  
+      <b>SMTP</b> (Simple Mail Transfer Protocol) se encarga de <u>enviar</u> tus mensajes,  
+      mientras que <b>IMAP</b> o <b>POP3</b> se encargan de <u>recibirlos</u>.  
+      Es como en los antiguos Correos del Ecuador: el cartero (SMTP) lleva tu carta hasta la casa del destinatario, 
+      y al llegar, tú la encuentras en tu buzón (IMAP o POP3).  
+      Gracias a estos servidores, podemos comunicarnos sin importar la distancia.
+    </p>
+    <img src="https://i.ytimg.com/vi/SlwSDpl4yds/sddefault.jpg" alt="Servidor de Correos">
+  </section>
+
+  <footer>
+    <p>Elaborado por: <b>Diego Ruperti</b> - 2do nivel en Desarrollo de Software</p>
+  </footer>
+</body>
+</html>
